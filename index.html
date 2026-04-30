@@ -112,7 +112,7 @@ You are seized by the instructor and taken to the so-called â€œGood Child Room.â
 There, you are subjected to electric shocks, 
 your personal belongings are still taken away.
 
-(HP -20)
+(Health -20)
 You were carried into the dormitory, remembering nothing. 
 When you woke up, 
 you and your 15 roommates were ordered to line up and run 100 laps around the track.
@@ -325,7 +325,7 @@ Restart?
 (else-if: $health &lt;= 30)[
 	(goto: &quot;end_freedom&quot;)
 ]
-(else-if: $sanity &gt; 0 and $health &gt; 0 and ($sanity &gt; 55 or $health &gt; 55))[
+(else-if: $sanity &gt; 0 and $health &gt; 0 and ($sanity &gt;= 55 or $health &gt;= 55))[
 	(goto: &quot;end_fall into darkness&quot;)
 ]
 (else:)[
