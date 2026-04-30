@@ -61,7 +61,7 @@ You feel dangerous.
 
 Your currently status：
 Sanity：$sanity
-Health：$health</tw-passagedata><tw-passagedata pid="4" name="Stay" tags="" position="1200,175" size="100,100">You chose to stay seated and wait for your mother.
+Health：$health</tw-passagedata><tw-passagedata pid="4" name="Stay" tags="" position="1300,125" size="100,100">You chose to stay seated and wait for your mother.
 A group of burly men smash the door open. 
 They grabb you.
 [[On the car]] </tw-passagedata><tw-passagedata pid="5" name="Run!" tags="" position="1225,375" size="100,100">You chose to escape through the window. 
@@ -133,10 +133,10 @@ Exhausted, you collapsed on the field and lost consciousness.
 You were carried back to the dormitory.
 In the following days, you and the others are required to attend classes.
 
-(Health -20)
+(Health -10)
 (Sanity - 20)
 
-(set:$health to $health - 20)
+(set:$health to $health - 10)
 (set: $sanity to $sanity - 20)
 
 Your current status:
@@ -149,12 +149,12 @@ The instructor didn’t waste words. He struck your back with a baton, and you c
 Several compliant students pinned you down. 
 &#39;&#39;(text-colour:red)[Your legs were beaten until they bled. ]&#39;&#39;
 
-(Health - 30)
+(Health - 20)
 
 You were carried back to the dormitory. 
 The instructor warned that if you disobeyed again, the punishment would be even harsher. In the following days, you and the others are required to attend classes.
 
-(set:$health to $health - 30)
+(set:$health to $health - 20)
 
 Your current status:
 Sanity: $sanity
@@ -200,7 +200,7 @@ The teacher looks at you coldly.
 Several students drag you into the bathroom.
 They (text-colour:red)[pour dirty water over you] and(text-colour:red)[ grab your hair, beating you. ]
 After a long time, the teacher walks in and warns you that next week is the (text-colour:orange)[school’s open day] for parents—don’t cause trouble.
-(set:$health to $health - 30)
+(set:$health to $health - 20)
 
 Your current status:
 Sanity: $sanity
@@ -218,8 +218,8 @@ After the performance, accompanied by a teacher, you walk up to them. You say:
 [[“Please save me—this place is hell!”]] 
 
 
-</tw-passagedata><tw-passagedata pid="15" name="“I’ve disappointed you. I won’t play games anymore. I’ll make it up to you.”" tags="" position="2650,350" size="100,100">(set:$health to $health - 10)
-(set: $sanity to $sanity - 10)
+</tw-passagedata><tw-passagedata pid="15" name="“I’ve disappointed you. I won’t play games anymore. I’ll make it up to you.”" tags="" position="2650,350" size="100,100">(set:$health to $health - 5)
+(set: $sanity to $sanity - 5)
 
 Your parents are satisfied with your answer. 
 They take you back home.
@@ -230,7 +230,7 @@ Your current status:
 Sanity: $sanity
 Health: $health
 
-[[See your ending]] </tw-passagedata><tw-passagedata pid="16" name="I want to stay in that good place. Please go back" tags="" position="2650,225" size="100,100">(set: $sanity to $sanity - 30)
+[[See your ending]] </tw-passagedata><tw-passagedata pid="16" name="I want to stay in that good place. Please go back" tags="" position="2650,225" size="100,100">(set: $sanity to $sanity - 20)
 
 You stay in school.
 The medieval lessons feel strangely clearer than the world you came from.
@@ -241,7 +241,7 @@ Your current status:
 Sanity: $sanity
 Health: $health
 
-[[See your ending]] </tw-passagedata><tw-passagedata pid="17" name="“Please save me—this place is hell!”" tags="" position="2650,525" size="100,100">(set:$health to $health - 30)
+[[See your ending]] </tw-passagedata><tw-passagedata pid="17" name="“Please save me—this place is hell!”" tags="" position="2650,525" size="100,100">(set:$health to $health - 20)
 Your parents watch you with cold indifference. 
 The teacher quickly steps forward to apologize: 
 “This child is rather rebellious.”
