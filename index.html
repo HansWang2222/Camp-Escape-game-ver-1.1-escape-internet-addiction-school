@@ -319,13 +319,13 @@ Restart?
 (set: $sanity to 100)
 (set: $health to 100)
 (goto: &quot;Begining&quot;)
-]</tw-passagedata><tw-passagedata pid="21" name="See your ending" tags="" position="2900,325" size="100,100">(if: $sanity &lt;= 20)[
+]</tw-passagedata><tw-passagedata pid="21" name="See your ending" tags="" position="2900,325" size="100,100">(if: $sanity &lt;= 30)[
 	(goto: &quot;end_assimilation&quot;)
 ]
-(else-if: $health &lt;= 20)[
+(else-if: $health &lt;= 30)[
 	(goto: &quot;end_freedom&quot;)
 ]
-(else-if: $sanity &gt; 0 and $health &gt; 0 and ($sanity &gt; 50 or $health &gt; 50))[
+(else-if: $sanity &gt; 0 and $health &gt; 0 and ($sanity &gt; 55 or $health &gt; 55))[
 	(goto: &quot;end_fall into darkness&quot;)
 ]
 (else:)[
