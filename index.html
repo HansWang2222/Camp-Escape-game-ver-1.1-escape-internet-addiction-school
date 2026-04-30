@@ -214,11 +214,14 @@ Your parents look pleased.
 After the performance, accompanied by a teacher, you walk up to them. You say:
 
 [[“I’ve disappointed you. I won’t play games anymore. I’ll make it up to you.”]] 
-[[I am doing well here! You can go now!]] 
+[[I want to stay in that good place. Please go back]] 
 [[“Please save me—this place is hell!”]] 
 
 
-</tw-passagedata><tw-passagedata pid="15" name="“I’ve disappointed you. I won’t play games anymore. I’ll make it up to you.”" tags="" position="2650,350" size="100,100">Your parents are satisfied with your answer. 
+</tw-passagedata><tw-passagedata pid="15" name="“I’ve disappointed you. I won’t play games anymore. I’ll make it up to you.”" tags="" position="2650,350" size="100,100">(set:$health to $health - 10)
+(set: $sanity to $sanity - 10)
+
+Your parents are satisfied with your answer. 
 They take you back home.
 But what you went through at the school has left you unable to trust anyone
 —especially your parents. 
@@ -227,7 +230,7 @@ Your current status:
 Sanity: $sanity
 Health: $health
 
-[[See your ending]] </tw-passagedata><tw-passagedata pid="16" name="I am doing well here! You can go now!" tags="" position="2650,225" size="100,100">(set: $sanity to $sanity - 30)
+[[See your ending]] </tw-passagedata><tw-passagedata pid="16" name="I want to stay in that good place. Please go back" tags="" position="2650,225" size="100,100">(set: $sanity to $sanity - 30)
 
 You stay in school.
 The medieval lessons feel strangely clearer than the world you came from.
@@ -316,14 +319,14 @@ Restart?
 (set: $sanity to 100)
 (set: $health to 100)
 (goto: &quot;Begining&quot;)
-]</tw-passagedata><tw-passagedata pid="21" name="See your ending" tags="" position="2900,325" size="100,100">(if: $sanity &lt;= 0)[
+]</tw-passagedata><tw-passagedata pid="21" name="See your ending" tags="" position="2900,325" size="100,100">(if: $sanity &lt;= 20)[
 	(goto: &quot;end_assimilation&quot;)
 ]
-(else-if: $health &lt;= 0)[
+(else-if: $health &lt;= 20)[
 	(goto: &quot;end_freedom&quot;)
 ]
 (else-if: $sanity &gt; 0 and $health &gt; 0 and ($sanity &gt; 50 or $health &gt; 50))[
-	(goto: &quot;end_fall into darkness&quot;)
+	(goto: &quot;end_fall_into_darkness&quot;)
 ]
 (else:)[
 	(goto: &quot;end_trapped&quot;)
